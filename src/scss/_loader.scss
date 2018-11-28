@@ -1,0 +1,17 @@
+.loader {
+  animation: load 0.7s linear reverse infinite;
+}
+
+@keyframes load {
+  from {
+    stroke-dashoffset: 157;
+  }
+
+  50% {
+    stroke-dashoffset: 314;
+  }
+
+  to{
+    stroke-dashoffset: 471;
+  }
+}

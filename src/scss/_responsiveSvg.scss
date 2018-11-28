@@ -1,0 +1,26 @@
+.responsiveSvg {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 150px;
+
+  @include sm {
+    width: 400px;
+    height: 200px;
+  }
+
+  @include md {
+    width: 500px;
+    height: 250px;
+  }
+
+  @include lg {
+    width: 600px;
+    height: 300px;
+  }
+
+  @include xl {
+    width: 800px;
+    height: 400px;
+  }
+}
