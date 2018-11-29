@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    browserSync = require('browser-sync').create();
+  sass = require('gulp-sass'),
+  browserSync = require('browser-sync').create();
 
 gulp.task('sass', function() {
   return gulp.src('src/scss/main.scss')
@@ -10,14 +10,16 @@ gulp.task('sass', function() {
 });
 
 gulp.task('serve', ['sass'], function() {
-
-    browserSync.init({
-        server: "src/"
-    });
-
-    gulp.watch("src/scss/**/*.scss", ['sass']);
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+  browserSync.init({
+    server: "src/"
+  });
+  gulp.watch("src/scss/**/*.scss", ['sass']);
+  gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
+gulp.task('copy', function(){
+  return gulp.src(['src/**/*.*', '!src/scss/**/*.*'])
+  .pipe(gulp.dest('app/'));
+});
 
 gulp.task('default', ['serve']);

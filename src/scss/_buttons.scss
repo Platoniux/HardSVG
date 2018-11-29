@@ -7,42 +7,42 @@
     margin: auto;
     border-radius: 5px;
 
-    &:hover .hover_rect {
+    &:hover .button__hover_rect {
       width: 335px;
       x: 0;
       fill-opacity: 1;
     }
 
-    &:hover .text {
+    &:hover .button__text {
       fill: white;
     }
   }
-}
 
-.white {
-  background-color: #f6eafe;
-}
+  &--white {
+    background-color: #f6eafe;
+  }
 
-.black {
-  background-color: #29282e;
-}
+  &--black {
+    background-color: #29282e;
+  }
 
-.text {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  transition: all 1s;
-}
+  &__hover_rect {
+    fill-opacity: 0.5;
+    transition: all 1s;
+  }
 
-.pink {
-  fill: #d81466;
-}
+  &__text {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 1s;
 
-.violet {
-  fill: #650e93;
-}
+    &--pink {
+      fill: #d81466;
+    }
 
-.hover_rect {
-  fill-opacity: 0.5;
-  transition: all 1s;
+    &--violet {
+      fill: #650e93;
+    }
+  }
 }
